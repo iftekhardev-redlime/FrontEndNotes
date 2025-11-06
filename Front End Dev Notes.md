@@ -80,6 +80,45 @@ const newHobbies = hobbies.map((item) => item + '!')
 cosnt newHObj = hobbies.map((item) => {text: item}) // always return arrays
 console.log(newHobbies);
 
+// destructuring arrays
+
+const [firstName, latName] = ["Max", "Guzi"] // firstName M lastName G
+
+// destructuring objects
+const {firstName, age} = {firstName: "Max", age: 34}
+
+const {name: userName, age} = { // aliasing
+  name: "max",
+  age: 34
+}
+
+console.log(userName); // max
+
+// Spread operator
+const newHobbies = ['Reading'];
+const mergedHobbies = [...hobbies, ...newHobbies] // pull out values from this array and merge the arrays : comma seperated values as new array
+
+
+const extendedUser = {
+  isAdmin: true,
+  ...user // pull out key value pairs from user object and add it here
+}
+
+
+// for loop: looping through arrays using of
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
+
+// Manipulating the DOM in JS : Document object model
+
+cosnt list = document.querySelector('ul')
+list.remove() // removes the item form DOM
+
+
+
+
+
 
 
 
