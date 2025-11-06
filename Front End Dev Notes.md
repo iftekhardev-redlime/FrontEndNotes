@@ -116,6 +116,40 @@ cosnt list = document.querySelector('ul')
 list.remove() // removes the item form DOM
 
 
+// Using functions as values
+const handleTimeout2 = () => {
+  console.log("timed out again!");
+}
+
+setTimeout(handleTimeout2, 2000); // passing as values
+setTimeout(handleTimeout2()) // calls imediatelly : wrong thing to do
+
+
+// function as parameter
+function greeter(greeterFn){
+  greetFn();
+}
+
+greeter(() => console.log("Hi"));
+
+
+// premitives and reference values
+
+// not stored in addres but stored in variables
+let userMessage = 'asdasd';
+userMessage = 'HelloThere' + userMessage; // new string will be produced
+
+
+// arrays are objects : reference values 
+const hobbies = ['Sports', 'Cooking'];
+hobbies.push("Working"); // reach out to that address open the value in that address and add this new item to this new item in memory
+console.log(hobbies);
+
+
+
+
+
+
 
 
 
