@@ -135,15 +135,18 @@ greeter(() => console.log("Hi"));
 
 // premitives and reference values
 
-// not stored in addres but stored in variables
+// not stored in addres but stored in variables : callstack (faster access)
 let userMessage = 'asdasd';
 userMessage = 'HelloThere' + userMessage; // new string will be produced
 
 
-// arrays are objects : reference values 
+// arrays are objects : reference values stored in heaps
 const hobbies = ['Sports', 'Cooking'];
 hobbies.push("Working"); // reach out to that address open the value in that address and add this new item to this new item in memory
 console.log(hobbies);
+
+
+
 
 
 
