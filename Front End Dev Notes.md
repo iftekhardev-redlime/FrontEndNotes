@@ -177,6 +177,41 @@ import reactImg from './assets/image.png';
 return <img src={reactImg} /> // always use image like this not using noraml path
 
 
+// props
+function CoreConcepts(props){
+  return (
+     <p>{props.title}</p>
+     <p>{props.description}</p>
+     <img src={props.image} />
+  );
+}
+
+... <CoreConcept title='asdads' /> // using it 
+
+// using spread operators in Components
+
+<CoreConcept {...CORE_CONCEPTS[0]} /> // CORE_CONCEPTS[0] is object with 
+// title, description and image
+CORE_CONCEPTS = [
+ {
+  "title": "",
+  "description": "",
+  "image": ...
+ }, {}...
+]
+
+
+// another way
+function CoreConcept({iamge, title, description}){
+ {image} // use it like this now
+}
+
+
+// importing styles in react components
+
+import './Header.css'; // if you import this it also auto applies the styles
+
+
 
 
 ```
