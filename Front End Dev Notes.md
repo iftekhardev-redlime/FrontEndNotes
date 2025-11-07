@@ -146,21 +146,35 @@ hobbies.push("Working"); // reach out to that address open the value in that add
 console.log(hobbies);
 
 
+Math.floor(1 + Math.random() * 3 + 1) // 1 - 3 it will return random
+
+```
+
+React Start:
+
+```jsx
+// Components: User interface building blocks
+// creating component : functional
+function Header(){
+  return (
+    <header>
+     ....
+    </header>
+  );
+}
+
+function App(){
+  return (<Header />);
+}
+
+export default App;
 
 
+// importing and optimized import of images
+import reactImg from './assets/image.png';
 
-
-
-
-
-
-
-
-
-
-
-
-
+...
+return <img src={reactImg} /> // always use image like this not using noraml path
 
 
 
