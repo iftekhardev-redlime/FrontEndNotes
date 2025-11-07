@@ -202,7 +202,7 @@ CORE_CONCEPTS = [
 
 
 // another way
-function CoreConcept({iamge, title, description}){
+function CoreConcept({image, title, description}){
  {image} // use it like this now
 }
 
@@ -211,7 +211,47 @@ function CoreConcept({iamge, title, description}){
 
 import './Header.css'; // if you import this it also auto applies the styles
 
+// children prop
+function Main({children}){
+return (
+ {children}
+);
+}
+
+<Main><SubMain /> </Main> // use it like this
+
+// reacting to events
+// onClick Listener
+function handleClick(){
+ ...
+}
+<button onClick={handleClick}>Click Me! </button> 
+
+// Passing Functions as Valeus to Props
+
+export default function TabButton({children, onSelect}){
+ 
+ return (
+   <li>
+     <button onClick={onSelect}>{children}</button>
+   </li>
+ );
+}
+
+// use it like this
+<TabButton onSelect={handleSelect}>Components</TabButton>
 
 
+// Passing custom arguments to event functions
+<TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+
+// REACT WILL ONLY EXECUTE COMPONENT FUNCTIONS ONCE
+// use useState to manage variable changings using states
+
+// CONDITIONAL RENDERING
+{selectedTopic && (<p> ...) } // selectedTopic exist then show
+
+// conditional styling
+<button className={isSelected ? 'active' : undefined} </button>
 
 ```
